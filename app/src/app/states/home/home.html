@@ -1,0 +1,17 @@
+<section ng-controller="home.controller">
+
+    <div ng-repeat="entryId in entryIds">
+
+        <div ng-init="entry=getBlogEntrySummaryById(entryId)"></div>
+
+        <h2><a href="/entry/{{entry.slug}}">{{entry.title}}</a></h2>
+
+        <div ng-bind-html-unsafe="entry.excerpt" ify-change-color-on-click-to="red"></div>
+
+        <a href="/entry/{{entry.slug}}" class="btn">Read More</a>
+
+        <hr ng-show="!$last"/>
+
+    </div>
+
+</section>
