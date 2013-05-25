@@ -15,9 +15,9 @@ module.exports = function(grunt)
 
     grunt.initConfig
     ({
-        srcDir: 'app/src',
-        distDir: 'app/dist',
-        tempDir: 'app/temp',
+        srcDir: 'client/src',
+        distDir: 'client/dist',
+        tempDir: 'client/temp',
         sass:{
             dist:{
                 options:{
