@@ -192,7 +192,7 @@ module.exports = function(grunt)
                             exclude: [
                                 'app/app.module',
                                 'app/app.settings',
-                                'mustard/routeDependencyResolverFor'
+                                'mustard/stateDependencyResolverFor'
                             ]
                         },
                         {
@@ -200,7 +200,7 @@ module.exports = function(grunt)
                             exclude: [
                                 'app/app.module',
                                 'app/app.settings',
-                                'mustard/routeDependencyResolverFor'
+                                'mustard/stateDependencyResolverFor'
                             ]
                         },
                         {
@@ -208,7 +208,7 @@ module.exports = function(grunt)
                             exclude: [
                                 'app/app.module',
                                 'app/app.settings',
-                                'mustard/routeDependencyResolverFor'
+                                'mustard/stateDependencyResolverFor'
                             ]
                         },
                         {
@@ -216,7 +216,7 @@ module.exports = function(grunt)
                             exclude: [
                                 'app/app.module',
                                 'app/app.settings',
-                                'mustard/routeDependencyResolverFor'
+                                'mustard/stateDependencyResolverFor'
                             ]
                         }
                     ]

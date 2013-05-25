@@ -2,15 +2,15 @@ define(function()
 {
     var isFirstRun = true;
 
-    return function routeDependencyResolverFor(route)
+    return function stateDependencyResolverFor(stateConfig)
     {
         return {resolver:['$q','$rootScope', function($q, $rootScope)
         {
             var deferred = $q.defer();
 
-            if(isFirstRun)
+            if(isFirstRun || stateConfig.optimize)
             {
-                require([route.routeDependencyId], function()
+                require([stateConfig.routeDependencyId], function()
                 {
                     $rootScope.$apply(function()
                     {
@@ -22,7 +22,7 @@ define(function()
             }
             else
             {
-                require(route.lazyDependencies, function()
+                require(stateConfig.lazyDependencies, function()
                 {
                     $rootScope.$apply(function()
                     {

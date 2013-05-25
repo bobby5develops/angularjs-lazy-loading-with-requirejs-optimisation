@@ -1,9 +1,9 @@
 define([
     'app/states/entry/entry.state.config',
     'mustard/versionedUrlFor',
-    'mustard/routeDependencyResolverFor'
+    'mustard/stateDependencyResolverFor'
 ],
-function(stateConfig, versionedUrlFor, routeDependencyResolverFor)
+function(stateConfig, versionedUrlFor, stateDependencyResolverFor)
 {
     var module = angular.module('app');
 
@@ -12,7 +12,7 @@ function(stateConfig, versionedUrlFor, routeDependencyResolverFor)
         $stateProvider.state('entry', {
             url: '/entry/:slug',
             templateUrl: versionedUrlFor('/app/states/entry/entry.html'),
-            resolve: routeDependencyResolverFor(stateConfig)
+            resolve: stateDependencyResolverFor(stateConfig)
         });
     });
 });

@@ -1,9 +1,9 @@
 define([
     'app/states/about/about.state.config',
     'mustard/versionedUrlFor',
-    'mustard/routeDependencyResolverFor'
+    'mustard/stateDependencyResolverFor'
 ],
-function(stateConfig, versionedUrlFor, routeDependencyResolverFor)
+function(stateConfig, versionedUrlFor, stateDependencyResolverFor)
 {
     var module = angular.module('app');
 
@@ -12,7 +12,7 @@ function(stateConfig, versionedUrlFor, routeDependencyResolverFor)
         $stateProvider.state('about', {
             url: '/about',
             templateUrl: versionedUrlFor('/app/states/about/about.html'),
-            resolve: routeDependencyResolverFor(stateConfig)
+            resolve: stateDependencyResolverFor(stateConfig)
         });
     });
 });
