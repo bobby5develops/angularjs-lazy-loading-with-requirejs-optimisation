@@ -1,6 +1,7 @@
 define({
     modules:[
         'ui.compat',
-        'ifyLinkActiveInState'
+        'ifyLinkActiveInState',
+        'ify.date'
     ]
 });

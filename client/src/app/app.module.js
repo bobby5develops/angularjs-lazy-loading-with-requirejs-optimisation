@@ -9,6 +9,8 @@ define
     {
         var app = angular.module('app', config.modules);
 
+        app.value('settings', settings);
+
         app.config(function($locationProvider)
         {
             $locationProvider.html5Mode(true);

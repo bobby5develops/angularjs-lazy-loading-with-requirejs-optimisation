@@ -1,3 +1,4 @@
 define({
-    defaultRoutePath: '/'
+    defaultRoutePath: '/',
+    defaultDateFormat: 'MMM d, yyyy'
 });
