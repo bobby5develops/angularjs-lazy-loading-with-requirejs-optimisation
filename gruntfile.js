@@ -86,12 +86,6 @@ module.exports = function(grunt)
             }
         },
         copy: {
-            vendor_to_temp: {
-                expand:true,
-                cwd:'<%= srcDir %>',
-                src: ['vendor/**/*'],
-                dest: '<%= tempDir %>'
-            },
             scripts_to_temp: {
                 expand:true,
                 cwd:'<%= srcDir %>',
@@ -147,11 +141,11 @@ module.exports = function(grunt)
                         'jQuery': 'vendor/jquery/jquery',
                         'twitter-bootstrap': 'vendor/bootstrap/js/bootstrap',
                         'angular': 'vendor/angular/angular',
-                        'angular-ui-states': 'vendor/angular/angular-ui-states',
                         'vendor.dependencies':'app/dependencies/vendor.dependencies',
                         'module.dependencies':'app/dependencies/module.dependencies',
                         'state.dependencies':'app/dependencies/state.dependencies',
                         'common.dependencies':'app/dependencies/common.dependencies',
+                        'component.dependencies':'app/dependencies/component.dependencies',
                         'app.module': 'app/app.module',
                         'app.settings': 'app/app.settings'
                     },
@@ -167,19 +161,16 @@ module.exports = function(grunt)
                             deps: ['jQuery'],
                             exports: 'angular'
                         },
-                        'angular-ui-states': {
-                            deps: ['angular']
-                        },
                         'common.dependencies': {
                             deps: ['module.dependencies']
+                        },
+                        'component.dependencies': {
+                            deps: ['vendor.dependencies']
                         },
                         'module.dependencies': {
                             deps: ['vendor.dependencies']
                         },
                         'vendor.dependencies': {
-                            deps: ['app.module']
-                        },
-                        'common.dependencies': {
                             deps: ['app.module']
                         }
                     },

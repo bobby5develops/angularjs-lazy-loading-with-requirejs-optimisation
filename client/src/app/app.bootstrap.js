@@ -5,7 +5,8 @@ require
         'vendor.dependencies',
         'module.dependencies',
         'state.dependencies',
-        'common.dependencies'
+        'common.dependencies',
+        'component.dependencies'
     ],
     function()
     {

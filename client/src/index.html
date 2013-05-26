@@ -24,9 +24,15 @@
 
                             <div class="nav-collapse collapse">
                                 <ul class="nav">
-                                    <li class="active"><a href="/">Home</a></li>
-                                    <li><a href="/about" ng-click="setRoute('1')">About</a></li>
-                                    <li><a href="/contact" ify-change-color-on-click-to="red">Contact</a></li>
+                                    <li ify-link-active-in-state="home">
+                                        <a href="/">Home</a>
+                                    </li>
+                                    <li ify-link-active-in-state="about">
+                                        <a href="/about">About</a>
+                                    </li>
+                                    <li ify-link-active-in-state="contact">
+                                        <a href="/contact">Contact</a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
