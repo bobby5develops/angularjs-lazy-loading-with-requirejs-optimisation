@@ -13,4 +13,7 @@ the r.js optimiser can use it to combine the lazy dependencies for this route in
 dependencies need to be hardcoded in an AMD module before it can be found by the optimiser. Note also that this file is meant to be generated
 from `xxx.state.config` as its lazy dependencies are also contained in the 'lazyDependencies' parameter in `xxx.state.config.js`.
 This generation has not yet been implemented however.
-* `xxx.state.js`: This file is responsible for registering the state with the module.
+* `xxx.state.js`: This file is responsible for registering the state with the module. note that it is not lazy loaded,
+but instead it will be compiled to become part of `app.bootstrap.js` as this file needs to run before the app is bootstrapped.
+A path entry for this file has to be found in [`client/src/app/dependencies/state.dependencies.js`](https://github.com/ifyio/angularjs-lazy-loading-with-requirejs-optimisation/blob/master/client/src/app/dependencies/state.dependencies.js)
+so that it can be found by the r.js optimiser
