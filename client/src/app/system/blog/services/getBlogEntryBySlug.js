@@ -38,7 +38,13 @@ function()
             // TODO: Implement
             $timeout(function()
             {
-                deferred.resolve(1)
+                var mapping = {
+                    'a-blog-entry' : 1,
+                    'another-blog-entry' : 2,
+                    'a-third-blog-title': 3
+                }
+
+                deferred.resolve(mapping[slug])
             });
 
             return deferred.promise;

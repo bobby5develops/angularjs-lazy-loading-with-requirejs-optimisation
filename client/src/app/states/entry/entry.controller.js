@@ -1,6 +1,6 @@
-angular.module('app').controller('entry.controller', function($scope, $routeParams, $state, $location, getBlogEntryBySlug)
+angular.module('app').controller('entry.controller', function($scope, $stateParams, $state, $location, getBlogEntryBySlug)
 {
-    $scope.entry = getBlogEntryBySlug($routeParams.slug);
+    $scope.entry = getBlogEntryBySlug($stateParams.slug);
 
     $scope.$state = $state;
 
