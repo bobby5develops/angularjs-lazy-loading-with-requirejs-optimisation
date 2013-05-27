@@ -2,6 +2,8 @@
 
     <h1>{{entry.title}}</h1>
 
-    <div ng-bind-html-unsafe="entry.contents"></div>
+    <small ify-date="entry.publishedDate" format="{{settings.defaultDateFormat}}"></small>
+
+    <div ng-bind-html-unsafe="entry.contents" class="top-margin"></div>
 
 </section>

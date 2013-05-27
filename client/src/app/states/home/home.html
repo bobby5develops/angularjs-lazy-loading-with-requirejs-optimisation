@@ -6,11 +6,11 @@
 
         <h2><a href="/entry/{{entry.slug}}">{{entry.title}}</a></h2>
 
-        <small>{{entry.publishedDate|date:settings.defaultDateFormat}}</small>
+        <small ify-date="entry.publishedDate" format="{{settings.defaultDateFormat}}"></small>
 
-        <div ng-bind-html-unsafe="entry.excerpt" style="margin-top:10px;"></div>
+        <div ng-bind-html-unsafe="entry.excerpt" class="top-margin"></div>
 
-        <a href="/entry/{{entry.slug}}" class="btn" style="margin-top:10px;">Read More</a>
+        <a href="/entry/{{entry.slug}}" class="btn" class="top-margin">Read More</a>
 
         <hr ng-show="!$last"/>
 
