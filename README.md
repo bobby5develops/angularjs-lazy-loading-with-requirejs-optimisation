@@ -1,4 +1,4 @@
-angularjs-lazy-loading-with-requirejs-optimisation
+angularjs-lazy-loading-with-requirejs-optimisation (WIP)
 ===============
 
 A demonstration of lazy loading in AngularJS using [RequireJS](http://requirejs.org/) with [r.js optimisation](http://requirejs.org/docs/optimization.html).
