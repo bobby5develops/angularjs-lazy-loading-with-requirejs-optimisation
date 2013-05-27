@@ -13,8 +13,13 @@
  * used in other routes, or if loading a single optimized file will provide a significant improvement in speed
  * regardless of some wasted bandwidth, then 'opimize' can be set to 'true'.
  *
- * It should be noted that all script files are minified regardless of whether they are loaded individual or combined.
- * The 'optimize' flag does not relate to minification.
+ * It should be noted that the 'optimize' flag only applies to subsequent (i.e., not the initial) app access. In other
+ * words, when the app is initially accessed, a single file containing the combined route dependencies will be
+ * delivered to the browser, regardless of the value of the 'optimize' flag. The 'optimize' flag will only come
+ * into effect when the user navigates to another route after initially accessing the site.
+ *
+ * It should also be noted that all script files are minified regardless of whether they are loaded individual or
+ * combined. The 'optimize' flag does not affect to minification.
  */
 define
 ({
