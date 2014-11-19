@@ -1,4 +1,4 @@
-This repo has not been updated in quite a while and so it does not represent the current state of the art with regards to lazy loading or even project structure. It exists purely just to provide a basic (not production quality) example. So I suggest only using it for educational purposes.
+Note: This repo has not been updated in quite a while and so it does not represent the current state of the art with regards to lazy loading or even project structure. It exists purely just to provide a basic (i.e., not production quality) example. So I suggest only using it for educational purposes.
 
 angularjs-lazy-loading-with-requirejs-optimisation (WIP)
 ===============
